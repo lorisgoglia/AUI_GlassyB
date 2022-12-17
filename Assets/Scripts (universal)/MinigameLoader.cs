@@ -6,6 +6,13 @@ public class MinigameLoader : MonoBehaviour
 {
     public GameObject sunnyScene;
     public GameObject uranusScene;
+    public GameObject marsScene;
+
+    private void Start()
+    {
+        
+    }
+
 
     public void SunnyToUranus()
     {
@@ -18,5 +25,22 @@ public class MinigameLoader : MonoBehaviour
         uranusScene.SetActive(false);
         sunnyScene.SetActive(true);
     }
+
+    public void SunnyToMars()
+    {
+
+        sunnyScene.SetActive(false);
+        marsScene.SetActive(true);
+        //aggiungere codice per spostare camera come figlio del rover
+    }
+
+    public void MarsToSunny()
+    {
+        marsScene.SetActive(false);
+        sunnyScene.SetActive(true);
+        //aggiungere codice per spostare camera in (0,0,0)
+    }
+
+
 
 }
