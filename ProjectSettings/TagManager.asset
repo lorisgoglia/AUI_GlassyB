@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - laser
+  - Uranus
+  - NoiseTarget
+  - AsteroidSpawner
+  - Asteroid
+  - PauseMenu
+  - Explosion
+  - Alien
+  - Camera
+  - Rover
+  - MainCameraMRTK
   layers:
   - Default
   - TransparentFX
