@@ -27,6 +27,14 @@ public class MinigameLoader : MonoBehaviour
         sunnyScene.SetActive(true);
     }
 
+    public void UranusToUranus()
+    {
+        uranusScene.SetActive(false);
+        //così non basta, serve resettare timer dal suo script, distruggere tutti gli asteroidi, disattivare e riattivare gli spawner
+        //resettare la vita di urano e richiamare la co routine per la spawn di asteroidi
+        uranusScene.SetActive(true);
+    }
+
     public void SunnyToMars()
     {
 

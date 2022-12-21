@@ -12,11 +12,11 @@ Material:
   m_ShaderKeywords: _ALPHATEST_ON _SPECULAR_HIGHLIGHTS _USECOLOR_ON _USEMAINTEX_ON
     _USE_SSAA
   m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Cutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -92,7 +92,7 @@ Material:
     - _Cull: 2
     - _CullMode: 0
     - _CustomMode: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.148
     - _DetailNormalMapScale: 1
     - _DirectionalLight: 0
     - _DstBlend: 0
@@ -106,7 +106,7 @@ Material:
     - _EnableSSAA: 1
     - _EnableTriplanarMapping: 0
     - _EnvironmentColorIntensity: 0.5
-    - _EnvironmentColorThreshold: 1.5
+    - _EnvironmentColorThreshold: 0
     - _EnvironmentColoring: 0
     - _FadeBeginDistance: 0.85
     - _FadeCompleteDistance: 0.5
@@ -115,6 +115,7 @@ Material:
     - _Glossiness: 0.5
     - _HoverLight: 0
     - _IgnoreZScale: 0
+    - _IndependentCorners: 0
     - _InnerGlow: 0
     - _InnerGlowPower: 4
     - _InstancedColor: 0
@@ -142,7 +143,7 @@ Material:
     - _RoundCornerMargin: 0.01
     - _RoundCornerRadius: 0.25
     - _RoundCorners: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.504
     - _SpecularHighlights: 1
     - _SphericalHarmonics: 0
     - _SrcBlend: 1
@@ -181,3 +182,5 @@ Material:
     - _ProximityLightMiddleColorOverride: {r: 0, g: 1, b: 0, a: 0.5}
     - _ProximityLightOuterColorOverride: {r: 0, g: 0, b: 1, a: 1}
     - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _RoundCornersRadius: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_BuildTextureStacks: []
