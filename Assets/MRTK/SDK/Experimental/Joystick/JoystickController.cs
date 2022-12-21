@@ -120,11 +120,25 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.Joystick
             {
                 if (Mode == JoystickMode.Move)
                 {
+
+                    Vector3 newRotation = TargetObject.transform.rotation.eulerAngles;
+                    // only take the horizontal axis from the joystick
+                    newRotation.y += (joystickGrabberPosition.x * RotationSpeed);
+                    newRotation.x = 0;
+                    newRotation.z = 0;
+                    TargetObject.transform.localRotation = Quaternion.Euler(newRotation);
+                    if (debugText != null)
+                    {
+                        debugText.text = TargetObject.transform.localRotation.eulerAngles.ToString();
+                    }
+
                     TargetObject.transform.position += (joystickGrabberPosition * MoveSpeed);
                     if (debugText != null)
                     {
                         debugText.text = TargetObject.transform.position.ToString();
                     }
+
+               
                 }
                 else if (Mode == JoystickMode.Rotate)
                 {
