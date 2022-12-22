@@ -5,6 +5,7 @@ using UnityEngine;
 public class UranusGameManager : MonoBehaviour
 {
     UranusLife uranusLife;
+    BeamGestures beamGestures;
     SpawnAsteroids spawnAsteroids;
     SpawnAsteroids spawnAsteroids2;
     SpawnAsteroids spawnAsteroids3;
@@ -31,6 +32,7 @@ public class UranusGameManager : MonoBehaviour
         gameOverPrefab.SetActive(true);
         pauseButton.SetActive(false);
         pausePrefab.SetActive(false);
+        uranusLife.currentHealth = uranusLife.maxHealth;
     }
 
     private void Awake()
@@ -41,6 +43,7 @@ public class UranusGameManager : MonoBehaviour
         spawnAsteroids3 = spawner3.GetComponent<SpawnAsteroids>();
         spawnFake = FakeSpawner.GetComponent<SpawnAsteroids>();
         spawnFake2 = FakeSpawner2.GetComponent<SpawnAsteroids>();
+        beamGestures = gameObject.GetComponent<BeamGestures>();
     }
 
     // Start is called before the first frame update
@@ -122,7 +125,39 @@ public class UranusGameManager : MonoBehaviour
             pauseButton.SetActive(true);
         }
     }
-    
+
+    public void isRestart()
+    {
+
+        spawner.SetActive(false);
+        spawner2.SetActive(false);
+        spawner3.SetActive(false);
+        FakeSpawner.SetActive(false);
+        FakeSpawner2.SetActive(false);
+        beamGestures.lockLaser = true;
+
+        var clones = GameObject.FindGameObjectsWithTag("Asteroid");
+        for (int i = 0; i < clones.Length; i++)
+        {
+            GameObject clone = clones[i];
+            //Destroy(clone);
+            clone.SetActive(false);
+        }
+
+        beamGestures.WaitStart();
+        uranus.SetActive(true);
+        spawner.SetActive(true);
+        spawner2.SetActive(true);
+        spawner3.SetActive(true);
+        spawnAsteroids.SpawnAgain();
+        spawnAsteroids2.SpawnAgain();
+        spawnAsteroids3.SpawnAgain();
+        FakeSpawner.SetActive(true);
+        FakeSpawner2.SetActive(true);
+        spawnFake.SpawnAgain();
+        spawnFake2.SpawnAgain();
+    }
+
     /*
     public void IsPause()
     {

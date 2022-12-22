@@ -16,7 +16,7 @@ public class BeamGestures : MonoBehaviour
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
-    private bool lockLaser = true;
+    public bool lockLaser = true;
 
     /*
     private void Awake()
@@ -26,6 +26,11 @@ public class BeamGestures : MonoBehaviour
     }*/
 
     private void Start()
+    {
+        WaitStart();
+    }
+
+    public void WaitStart()
     {
         StartCoroutine(WaitForStart());
     }

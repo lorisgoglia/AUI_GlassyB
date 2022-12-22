@@ -18,6 +18,7 @@ public class UranusTimer : MonoBehaviour
     public float tempTime = 0;
     public bool pause = false;
     public bool restart = false;
+    public bool stopGameOver = false;
     [SerializeField] private GameObject pauseButton;
 
 
@@ -91,7 +92,7 @@ public class UranusTimer : MonoBehaviour
     
     void IsGameOver()
     {
-        if (timeOver.activeInHierarchy == true)
+        if (timeOver.activeInHierarchy == true && stopGameOver == false)
         {
             timeValue = 99999;
         }
@@ -102,12 +103,11 @@ public class UranusTimer : MonoBehaviour
     {
         if (restart == true)
         {
+            stopGameOver = true;
             timeStart = 4;
-            timeValue = 180;
+            timeValue = 61;
             countdown.enabled = true;
             Countdown();
-
-
         }
 
     }

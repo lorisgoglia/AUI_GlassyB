@@ -6,7 +6,7 @@ public class UranusLife : MonoBehaviour
 {   
 
     public int currentHealth = 6;
-    [SerializeField] private int maxHealth = 6;
+    public int maxHealth = 6;
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private GameObject pausePrefab;
     public bool isPause = false;
@@ -47,5 +47,11 @@ public class UranusLife : MonoBehaviour
             SoundManagerScript.PlaySound("impact");
         }
     }
+
+    public void HealthOnRestart()
+    {
+        currentHealth = maxHealth;
+    }
+
 
 }
