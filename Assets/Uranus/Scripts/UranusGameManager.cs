@@ -21,7 +21,7 @@ public class UranusGameManager : MonoBehaviour
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject gameOverPrefab;
     [SerializeField] private GameObject pausePrefab;
-    [SerializeField] private GameObject pauseButton;
+    //[SerializeField] private GameObject pauseButton;
     public bool PauseFinish = false;
 
     IEnumerator GameOver()
@@ -30,7 +30,7 @@ public class UranusGameManager : MonoBehaviour
         menu.SetActive(true);
         winPrefab.SetActive(false);
         gameOverPrefab.SetActive(true);
-        pauseButton.SetActive(false);
+        //pauseButton.SetActive(false);
         pausePrefab.SetActive(false);
         uranusLife.currentHealth = uranusLife.maxHealth;
     }
@@ -101,7 +101,7 @@ public class UranusGameManager : MonoBehaviour
         if (pausePrefab.activeInHierarchy == true)
         {
             PauseFinish = false;
-            pauseButton.SetActive(false);
+            //pauseButton.SetActive(false);
             spawner.SetActive(false);
             spawner2.SetActive(false);
             spawner3.SetActive(false);
@@ -122,7 +122,7 @@ public class UranusGameManager : MonoBehaviour
             FakeSpawner2.SetActive(true);
             spawnFake.SpawnAgain();
             spawnFake2.SpawnAgain();
-            pauseButton.SetActive(true);
+            //pauseButton.SetActive(true);
         }
     }
 
