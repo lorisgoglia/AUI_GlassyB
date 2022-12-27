@@ -108,15 +108,15 @@ public class BeamGestures : MonoBehaviour
             case HandGesture.Point:
                 break;
             case HandGesture.Grab:
-                //pauseBtn.SetActive(false);
+                pauseBtn.SetActive(false);
             break; 
             case HandGesture.Victory:
                 break;
             case HandGesture.OpenHand:
-                //pauseBtn.SetActive(true);
+                pauseBtn.SetActive(true);
             break;
             default:
-                //pauseBtn.SetActive(false);
+                pauseBtn.SetActive(false);
             break;
         }
 

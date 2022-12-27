@@ -4964,6 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetsWon: {fileID: 809269160}
   uranus: {fileID: 1680622553}
+  numberOfPlanets: 0
 --- !u!1 &812518794
 GameObject:
   m_ObjectHideFlags: 0

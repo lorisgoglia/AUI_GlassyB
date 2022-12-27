@@ -12,6 +12,7 @@ public class PlanetsWonUranus : MonoBehaviour
     private const int  three = 3;
     private const int two = 2;
     private const int one = 1;
+    public int numberOfPlanets = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +28,21 @@ public class PlanetsWonUranus : MonoBehaviour
 
     public void PlanetsWon()
     {
-        if (uranusLife.currentHealth == uranusLife.maxHealth) planetsWon.text = three.ToString();
-        else if (uranusLife.currentHealth < uranusLife.maxHealth && uranusLife.currentHealth >= (uranusLife.maxHealth / 2)) planetsWon.text = two.ToString();
-        else if (uranusLife.currentHealth < (uranusLife.maxHealth / 2) && uranusLife.currentHealth > 0) planetsWon.text = one.ToString();
+        if (uranusLife.currentHealth == uranusLife.maxHealth)
+        {
+            planetsWon.text = three.ToString();
+            numberOfPlanets = three;
+        }
+        else if (uranusLife.currentHealth < uranusLife.maxHealth && uranusLife.currentHealth >= (uranusLife.maxHealth / 2))
+        {
+            planetsWon.text = two.ToString();
+            numberOfPlanets = two;
+        }
+        else if (uranusLife.currentHealth < (uranusLife.maxHealth / 2) && uranusLife.currentHealth > 0)
+        {
+            planetsWon.text = one.ToString();
+            numberOfPlanets = one;
+        }
     }
 
 }
