@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.Log("[TriggerDialogue method running]");
+        // Debug.Log("[TriggerDialogue method running]");
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }
