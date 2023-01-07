@@ -7,9 +7,13 @@ public class CollectedPlanets : MonoBehaviour
 
     public GameObject[] planets;
     public int collected=0;
+    PlanetsWonUranus planetsWonUranus;
+    [SerializeField] private GameObject uranusPlanets;
 
     private void Awake()
     {
+
+        planetsWonUranus = uranusPlanets.GetComponent<PlanetsWonUranus>();
         foreach (GameObject planet in planets)
             planet.SetActive(false);
     }
@@ -17,8 +21,9 @@ public class CollectedPlanets : MonoBehaviour
     {
         UpdateVisiblePlanets();
     }
-    public void updatePlanets(int num)
+    public void updatePlanets()
     {
+        int num = planetsWonUranus.numberOfPlanets;
         collected += num;
     }
 
