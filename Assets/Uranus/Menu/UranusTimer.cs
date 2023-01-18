@@ -35,6 +35,14 @@ public class UranusTimer : MonoBehaviour
 
     }
 
+    //It will manage stopGameOver field
+    IEnumerator FixRestart()
+    {
+        stopGameOver = true;
+        yield return new WaitForSeconds(1);
+        stopGameOver = false;
+    }
+
     private void Start()
     {
         menu.SetActive(false);
@@ -103,7 +111,8 @@ public class UranusTimer : MonoBehaviour
     {
         if (restart == true)
         {
-            stopGameOver = true;
+            //stopGameOver = true;
+            StartCoroutine(FixRestart());
             timeStart = 4;
             timeValue = 61;
             countdown.enabled = true;

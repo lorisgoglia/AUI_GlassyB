@@ -19,8 +19,9 @@ public class BeamGestures : MonoBehaviour
     private Pose leftHandPose;
     private Pose leftHandPointerPose;
     public bool lockLaser = true;
+    public bool lockPause = true;
 
-    [SerializeField] private GameObject pauseBtn;
+    //[SerializeField] private GameObject pauseBtn;
 
     /*
     private void Awake()
@@ -43,6 +44,7 @@ public class BeamGestures : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         lockLaser = false;
+        lockPause = false;
     }
     
 
@@ -80,7 +82,7 @@ public class BeamGestures : MonoBehaviour
                 isOpen = false;
                 //SoundManagerScript.PlaySound("reloading");
                 laser.SetActive(false);
-                pauseBtn.SetActive(false);
+                //pauseBtn.SetActive(false);
                 break; 
             case HandGesture.Victory:
                 break;
@@ -89,48 +91,59 @@ public class BeamGestures : MonoBehaviour
                 StartCoroutine(LaserDeactivator());
                 isOpen = true;
                 //laser.GetComponent<MeshRenderer>().enabled = true;
-                pauseBtn.SetActive(true);
+                //pauseBtn.SetActive(true);
                 break;
             default:
                 //laser.GetComponent<MeshRenderer>().enabled = false;
                 laser.SetActive(false);
-                pauseBtn.SetActive(false);
+                //pauseBtn.SetActive(false);
                 break;
         }
 
+        
         //mano sinistra
         HandState leftHandState = NRInput.Hands.GetHandState(HandEnum.LeftHand);
         if (leftHandState == null)
             return;
-
+        
         switch(leftHandState.currentGesture)
         {
             case HandGesture.Point:
                 break;
             case HandGesture.Grab:
-                pauseBtn.SetActive(false);
             break; 
             case HandGesture.Victory:
                 break;
             case HandGesture.OpenHand:
-                pauseBtn.SetActive(true);
-            break;
+                if (lockPause == false)
+                {
+                    menu.SetActive(true);
+                    pausePrefab.SetActive(true);
+                    winPrefab.SetActive(false);
+                    overPrefab.SetActive(false);
+                }
+                break;
             default:
-                pauseBtn.SetActive(false);
+                //pauseBtn.SetActive(false);
+                //pausePrefab.SetActive(false);
             break;
         }
-
+        
         //Questa parte serve a gestire il movimento del laser
         rightHandPose = rightHandState.GetJointPose(HandJointID.Palm);
         rightHandPointerPose = rightHandState.pointerPose;
         laser.transform.SetPositionAndRotation(rightHandPose.position, rightHandPointerPose.rotation);
 
-        
+        /*
         //Questa parte serve a gestire il movimento del bottone
+        pauseBtn.SetActive(true);
         leftHandPose = leftHandState.GetJointPose(HandJointID.Palm);
         leftHandPointerPose = leftHandState.pointerPose;
         pauseBtn.transform.SetPositionAndRotation(leftHandPose.position, leftHandPointerPose.rotation);
+        */
 
+        //Questa parte serve a gestire la pausa
+        //if (pauseBtn.activeInHierarchy) pausePrefab.SetActive(true);
     }
 
     public void GoPause()
