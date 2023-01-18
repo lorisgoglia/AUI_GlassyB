@@ -158,6 +158,17 @@ public class UranusGameManager : MonoBehaviour
         spawnFake2.SpawnAgain();
     }
 
+    public void quitFromPause()
+    {
+        var clones = GameObject.FindGameObjectsWithTag("Asteroid");
+        for (int i = 0; i < clones.Length; i++)
+        {
+            GameObject clone = clones[i];
+            //Destroy(clone);
+            clone.SetActive(false);
+        }
+    }
+
     /*
     public void IsPause()
     {
