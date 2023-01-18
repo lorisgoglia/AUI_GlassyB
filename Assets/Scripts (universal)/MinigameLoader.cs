@@ -10,6 +10,9 @@ public class MinigameLoader : MonoBehaviour
     public FollowCamera followScript;
     public GameObject rover;
     public GameObject camera;
+    public Animator animator;
+
+
     private void Start()
     {
     }
@@ -17,6 +20,7 @@ public class MinigameLoader : MonoBehaviour
 
     public void SunnyToUranus()
     {
+        animator.SetBool("IsIn", false);
         sunnyScene.SetActive(false);
         uranusScene.SetActive(true);
     }
@@ -37,6 +41,7 @@ public class MinigameLoader : MonoBehaviour
 
     public void SunnyToMars()
     {
+        animator.SetBool("IsIn", false);
 
         sunnyScene.SetActive(false);
         marsScene.SetActive(true);

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using NRKernal;
 using UnityEngine.UI;
-
 public class TrackingImageVisualizer : MonoBehaviour
 {
 
@@ -16,6 +15,11 @@ public class TrackingImageVisualizer : MonoBehaviour
     MeshRenderer meshRendererMars;
     MeshRenderer meshRendererUranus;
 
+    
+
+
+
+
 
     private void Awake()
     {
@@ -25,6 +29,8 @@ public class TrackingImageVisualizer : MonoBehaviour
 
         meshRendererMars.enabled = false;
         meshRendererUranus.enabled = false;
+
+
 
     }
     private void Update()
