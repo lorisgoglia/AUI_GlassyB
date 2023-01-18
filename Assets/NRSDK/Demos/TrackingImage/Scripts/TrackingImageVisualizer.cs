@@ -7,7 +7,8 @@ public class TrackingImageVisualizer : MonoBehaviour
 {
 
     public NRTrackableImage image;
-    //public GameObject cube;
+    public GameObject contorno;
+    
 
 
     [SerializeField] public GameObject btnMars;
@@ -37,17 +38,15 @@ public class TrackingImageVisualizer : MonoBehaviour
     {
         if (image == null)
         {
-            //cube.SetActive(false);
-            //marsButton.interactable = false;
-            //uranusButton.interactable = false;
+            contorno.SetActive(false);
             return;
         }
-        /*
+        
         var center = image.GetCenterPose();
         transform.position = center.position;
         transform.rotation = center.rotation;
-        cube.SetActive(true);
-        */
+        contorno.SetActive(true);
+        
 
 
 
