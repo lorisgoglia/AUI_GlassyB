@@ -57,7 +57,7 @@ public class UranusTimer : MonoBehaviour
         IsGameOver();
     }
 
- 
+
 
     //here I'm setting what time and how the time have to be seen on the display, if the last value findend it's negative, I'll reset it at zero, to prevent the glitch, otherwise I calculate the minutes and seconds left
     void DisplayTime(float timeToDisplay)
@@ -97,7 +97,7 @@ public class UranusTimer : MonoBehaviour
 
     }
     */
-    
+
     void IsGameOver()
     {
         if (timeOver.activeInHierarchy == true && stopGameOver == false)
@@ -164,7 +164,7 @@ public class UranusTimer : MonoBehaviour
             timeValue -= Time.deltaTime;
             tempTime = timeValue;
             */
-            if(pauseGame.activeInHierarchy == false)
+            if (pauseGame.activeInHierarchy == false)
             {
                 timeValue -= Time.deltaTime;
                 tempTime = timeValue;
@@ -175,7 +175,7 @@ public class UranusTimer : MonoBehaviour
             }
 
         }
-        else if(timeValue > 9999) //if we have game over panel the time must stop
+        else if (timeValue > 9999) //if we have game over panel the time must stop
         {
             timeValue = tempTime;
         }
