@@ -42,7 +42,7 @@ public class BeamGestures : MonoBehaviour
 
     IEnumerator WaitForStart()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         lockLaser = false;
         lockPause = false;
     }
@@ -69,13 +69,13 @@ public class BeamGestures : MonoBehaviour
         switch (rightHandState.currentGesture)
         {
             case HandGesture.Point:
-                if (lockLaser == false)
+                /*if (lockLaser == false)
                 {
                     menu.SetActive(true);
                     winPrefab.SetActive(false);
                     pausePrefab.SetActive(true);
                     overPrefab.SetActive(false);
-                }
+                }*/
                 break;
             case HandGesture.Grab:
                 //laser.GetComponent<MeshRenderer>().enabled = false;
