@@ -19,7 +19,7 @@ public class UranusTimer : MonoBehaviour
     public bool pause = false;
     public bool restart = false;
     public bool stopGameOver = false;
-    [SerializeField] private GameObject pauseButton;
+
 
 
     //I want to enable and disenable the "GO!" text at the beginning of the game, after 1 second
@@ -82,7 +82,6 @@ public class UranusTimer : MonoBehaviour
         timeOver.SetActive(false);
         pauseGame.SetActive(false);
         win.SetActive(true);
-        pauseButton.SetActive(false);
     }
 
     /*
