@@ -19,6 +19,7 @@ public class UranusTimer : MonoBehaviour
     public bool pause = false;
     public bool restart = false;
     public bool stopGameOver = false;
+ 
 
 
 
@@ -113,7 +114,7 @@ public class UranusTimer : MonoBehaviour
             //stopGameOver = true;
             StartCoroutine(FixRestart());
             timeStart = 4;
-            timeValue = 61;
+            timeValue = 47;
             countdown.enabled = true;
             Countdown();
         }

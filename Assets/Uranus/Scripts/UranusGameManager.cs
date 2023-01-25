@@ -61,6 +61,7 @@ public class UranusGameManager : MonoBehaviour
         DestroySpawners();
         IsGameOver();
         IsPause(PauseFinish);
+        pauseOnDeath();
     }
 
     public void DestroyAsteroids()
@@ -173,6 +174,12 @@ public class UranusGameManager : MonoBehaviour
             //Destroy(clone);
             clone.SetActive(false);
         }
+    }
+
+    //It avoids pausing game on death
+    public void pauseOnDeath()
+    {
+        if (uranusLife.currentHealth == 0) pausePrefab.SetActive(false);
     }
 
     /*

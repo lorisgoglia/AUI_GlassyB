@@ -42,6 +42,8 @@ public class BeamGestures : MonoBehaviour
 
     IEnumerator WaitForStart()
     {
+        lockLaser = true;
+        lockPause = true;
         yield return new WaitForSeconds(4);
         lockLaser = false;
         lockPause = false;
