@@ -3477,7 +3477,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1823026956}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1116747124}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5eb8fea5d02a3f4c881ebad884467fb, type: 3}
@@ -6210,6 +6210,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 919114919}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &776398311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3242819822930715658, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1823026956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &791566560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8568,7 +8574,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1823026956}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 776398311}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 881e03aaca19b1f44b15709b26778819, type: 3}
@@ -9139,6 +9145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &1116747124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8907119303090871392, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1823026956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137869458
 GameObject:
   m_ObjectHideFlags: 0
@@ -15523,6 +15535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3242819822930715657, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
         type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1116747124}
+    - target: {fileID: 3242819822930715657, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
+        type: 3}
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 0}
@@ -15541,6 +15558,11 @@ PrefabInstance:
       propertyPath: timeValue
       value: 47
       objectReference: {fileID: 0}
+    - target: {fileID: 3242819822996133351, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 776398311}
     - target: {fileID: 3242819823563779940, guid: d2b266bbe96e8954383d7c2cc68bcfaf,
         type: 3}
       propertyPath: m_IsActive
@@ -16018,7 +16040,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1823026956}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 776398311}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fefcad9903f66d6458aa807087444826, type: 3}
