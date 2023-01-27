@@ -32,7 +32,6 @@ public class TrackingImageVisualizer : MonoBehaviour
         meshRendererUranus.enabled = false;
 
 
-
     }
     private void Update()
     {
@@ -43,6 +42,7 @@ public class TrackingImageVisualizer : MonoBehaviour
         }
         
         var center = image.GetCenterPose();
+        //Vector2 sizeImage image.Size;
         transform.position = center.position;
         transform.rotation = center.rotation;
         contorno.SetActive(true);
