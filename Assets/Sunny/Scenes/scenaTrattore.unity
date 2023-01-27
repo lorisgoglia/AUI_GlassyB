@@ -13619,7 +13619,7 @@ GameObject:
   - component: {fileID: 1646771315}
   - component: {fileID: 1646771314}
   m_Layer: 0
-  m_Name: CollectedPlanets
+  m_Name: Planets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13632,7 +13632,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646771313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 553f40bc1844c8c48a90257c67c082c1, type: 3}
   m_Name: 
@@ -16353,6 +16353,7 @@ MonoBehaviour:
   rover: {fileID: 645685503}
   camera: {fileID: 52780552}
   animator: {fileID: 531130988}
+  collectedPlanets: {fileID: 1966266863}
 --- !u!4 &1926374031
 Transform:
   m_ObjectHideFlags: 0
@@ -16563,6 +16564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1966266862}
+  - component: {fileID: 1966266863}
   m_Layer: 0
   m_Name: CollectedPlanets
   m_TagString: Untagged
@@ -16584,6 +16586,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966266863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966266861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553f40bc1844c8c48a90257c67c082c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 2027459554}
+  - {fileID: 2016617079}
+  - {fileID: 8593569881143031178}
+  - {fileID: 275536595}
+  - {fileID: 1836107795}
+  - {fileID: 764600902}
+  - {fileID: 1082019068}
+  - {fileID: 2018566265}
+  - {fileID: 1404672687}
+  collected: 0
+  uranusPlanets: {fileID: 809269158}
 --- !u!1 &1975066681
 GameObject:
   m_ObjectHideFlags: 0

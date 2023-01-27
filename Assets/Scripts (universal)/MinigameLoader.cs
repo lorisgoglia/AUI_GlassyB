@@ -11,6 +11,7 @@ public class MinigameLoader : MonoBehaviour
     public GameObject rover;
     public GameObject camera;
     public Animator animator;
+    public CollectedPlanets collectedPlanets;
 
 
     private void Start()
@@ -28,6 +29,7 @@ public class MinigameLoader : MonoBehaviour
     public void UranusToSunny()
     {
         uranusScene.SetActive(false);
+        collectedPlanets.updatePlanets();
         sunnyScene.SetActive(true);
     }
 
